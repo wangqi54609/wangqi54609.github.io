@@ -1,0 +1,22 @@
+<html>
+<head>
+<title> qi</title>
+    <script>
+    function answer(x, outputDiv){
+        console.log('inputVal '+ x);
+        console.log('outputDiv' + outputDiv);
+        var inputValStr = x.value;
+        console.log('inputValStr = ', inputValStr);
+        var outputStr = eval(inputValStr);
+        outputDiv.innerHTML = "<h1>" + outputStr + "</h1>";
+    }
+    </script>
+</head>
+<body>
+<div id="div2">
+    <input id="input1" type="text"/>
+    <button onclick="answer(input1, answerDiv)">Click</button>
+</div>
+<div id="answerDiv"></div>
+</body>
+</html>

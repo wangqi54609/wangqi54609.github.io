@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title>
+    Hello Qi
+    </title>
+    <script>
+    console.log('hello Cock hancock');
+    console.log('hello qi' );
+    </script>
+</head>
+<body>
+    <h1>Hello 你好 hello</h1>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.moveTo(200, 0);
+        ctx.lineTo(0, 100);
+        ctx.stroke();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(25, 10, 150, 75);
+    </script>
+    <canvas id="myCanvas2" width="200" height="100"></canvas>
+    <script>
+    var canvas = document.getElementById("myCanvas2");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#000000";
+    ctx.fillRect(0, 0, 150, 75);
+    </script>
+    <canvas id="myCanvas3" width="200" height="100"></canvas>
+    <script>
+    var draw = function(x1, y1, x2, y2, x3, y3, color, type, canvasName) {
+        var canvas = document.getElementById(canvasName);
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.lineTo(x3, y3);
+          ctx[type + 'Style'] = color;
+          ctx.closePath();
+        ctx[type]();
+    }
+    draw(75,0,25,80,125,80, "#0000FF", "fill", "myCanvas3");
+    draw(75,100,25,20,125,20, "#0000FF", "fill", "myCanvas3");
+    </script>
+    <canvas id="myCanvas4" width="200" height="100"></canvas>
+    <script>
+    draw(75,0,25,80,125,80, "#FF0000", "stroke", "myCanvas4");
+    draw(75,100,25,20,125,20, "#FF0000", "stroke", "myCanvas4");
+    </script>
+</body>
+</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            margin: 250px auto;
+            animation: run 5s infinite linear;
+        }
+        li{
+            list-style: none;
+            width:200px;
+            height:200px;
+            position: absolute;
+            left: 90;
+            top: 90;
+            opacity: 0.9;
+        }
+        li:first-child{
+            background: red;
+            transform: translateZ(100px)
+        }
+        li:nth-child(2){
+            background: green;
+            transform: translateY(-100px) rotateX(90deg);
+        }
+        li:nth-child(3){
+            background: pink;
+            transform: translateY(100px) rotateX(90deg);
+        }
+        li:nth-child(4){
+            background: orange  ;
+            transform: translateX(-100px) rotateY(90deg);
+        }
+        li:nth-child(5){
+            background: yellow;
+            transform: translateX(100px) rotateY(90deg);
+        }
+        li:nth-child(6){
+            background: blue;
+            transform: translateZ(-100px);
+        }
+         @keyframes run {
+            0%{
+                transform:rotateX(0deg) rotateY(0deg);
+            }
+            100%{
+                transform:rotateX(360deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>
+    clock
+    </title>
+    <script>
+    console.log('starting');
+    var timerFunc = function(){
+        var timeStr = Date();
+        console.log(timeStr);
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.clearRect(0,0,canvas.width, canvas.height);
+        ctx.font = "30px Arial";
+        ctx.fillText(timeStr, 10, 50);
+        window.setTimeout(timerFunc, 1000);
+    }
+    </script>
+</head>
+<body>
+ <canvas id="myCanvas" width="900" height="900"></canvas>
+<script>
+  timerFunc();
+</script>
+</body>
+</html>

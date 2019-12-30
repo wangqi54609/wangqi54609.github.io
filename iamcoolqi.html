@@ -1,0 +1,27 @@
+<html>
+<head>
+<title> I am cool Qi</title>
+</head>
+<body>
+<script>
+    function showInput(txtInput, imgElt){
+        console.log('txtInput ', txtInput);
+        console.log('imgElt ', imgElt);
+        div2=document.getElementById("div2");
+        div2.innerHTML="<h1>" + txtInput.value + "</h1>";
+        imgElt.src = txtInput.value;
+    }
+    </script>
+<div id="div1">
+    <input id="input1" type="text"/>
+    <button onclick="showInput(input1, img1); showInput(input1, img2)">Click</button>
+</div>
+<div id="div2">
+</div>
+hello world, 
+<br>I am cool Qi,我是小酷q<br>
+<img src="PICTURES/123.gif" id="img1">
+<br> <img src="PICTURES/234.jpeg" id="img2">
+ </body>
+</html>
+
